@@ -93,14 +93,14 @@
         {
           "type": "file",
           "dest-filename": "complete.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-20-03.zip",
-          "sha256": "85cf747b5923f18a8d0f37d0cef647636d70ddfeda5de49ea019e7e440f9e4e0"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-22-03.zip",
+          "sha256": "e0a5f81b4356eda0bb05c72a84cde957fb7fc7e6a3ea0c1dd336e1241fd4e006"
         },
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-01-04-21.zip",
-          "sha256": "f0266006c4b7114e4f4719801696fbe8780cf9d767e948fb6478c752989cbee8"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-22-05-27.zip",
+          "sha256": "19f96ff84681517b3d7ba45a5072f4fe6db91b2b904e34c06bafdc9a08869a38"
         },
         {
           "type": "file",
@@ -135,7 +135,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldglite.git",
-          "commit": "de4b06b718dbc67d495f316bd0143f6e59bc3f84"
+          "commit": "667ffac7e6cfabf52d082c3d1f2c2ff604316715"
         }
       ],
       "post-install": [
@@ -161,7 +161,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "fc21e23dd7de24c07f0f37dc7cc36dd5bd252f3c"
+          "commit": "a9a86eba438dba30eb7f4487382bc706cacd8a6b"
         }
       ],
       "post-install": [
@@ -186,7 +186,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/povray.git",
-          "commit": "59f04740497a259d94922eeebc4ccff34e7510f2"
+          "commit": "596043b45dcf58ba5afee8f3afe763fef2631fdd"
         }
       ],
       "modules": [
@@ -283,9 +283,10 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/trevorsandy/lpub3d-ci.git",
-          "commit": "a0952ffe4b7640e8bbf69589d721256bfa944845"
-        }      
+          "url": "https://github.com/trevorsandy/lpub3d.git",
+          "tag": "v2.4.4",
+          "commit": "0ba24afe3562139f982a091564c5d262f0bcd635"
+        }
       ],
       "post-install": [
         "mv ${FLATPAK_DEST}/share/mime/packages/lpub3d.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
@@ -302,11 +303,11 @@
         "env": {
           "FLATPAK_BUILD_CHECK": "1",
           "LP3D_CHECK_STATUS": "--version --app-paths",
-          "LP3D_BUILD_OS": "flatpak", 
-          "LP3D_CHECK_LDD": "1",         
+          "LP3D_BUILD_OS": "flatpak",
+          "LP3D_CHECK_LDD": "1",
           "LPUB3D_DEST": "/app",
           "SOURCE_DIR": "/run/build/build-check",
-          "QT_QPA_PLATFORM": "xcb",         
+          "QT_QPA_PLATFORM": "xcb",
           "QT_QPA_PLATFORM_PLUGIN_PATH": "/usr/lib/plugins",
           "QT_PLUGIN_PATH": "/usr/lib/plugins"
         }
@@ -314,7 +315,7 @@
       "build-commands": [
         "./builds/check/build_checks.sh"
       ],
-      "sources": [     
+      "sources": [
         {
           "type": "shell",
           "commands": [
